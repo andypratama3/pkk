@@ -218,6 +218,7 @@ INSERT INTO `pengguna` (`id_pengguna`, `id_anggota`, `username`, `password`, `ha
 (1, 2, 'ketua', '$2y$10$g2D5nSI5EHa/93kKYvjXnuBRX2q5jdBw9CTj3KeVopRGOCaGLniCi', 'Ketua', 'aktif'),
 (2, 1, 'dasawisma', '$2y$10$0GQxVvspJwHocoUPkrq1Teo9O/WeL9q8h4BHWr5JxctptWRixi/5e', 'Dasawisma', 'aktif'),
 (3, 1, 'sekretaris', '$2y$10$RUP7FKSMmc4OQTtOaPhSw.4mIhEkalJimgtNMVtqNyFsb.T6SPsYG', 'Sekretaris_PKK', 'aktif');
+(4, 1, 'bendahara', 'c9ccd7f3c1145515a9d3f7415d5bcbea', 'Bendahara', 'aktif');
 
 -- --------------------------------------------------------
 

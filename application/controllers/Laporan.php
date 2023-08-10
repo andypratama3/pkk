@@ -14,7 +14,9 @@ class Laporan extends CI_Controller {
 		$this->load->model('Kader_model');
 		$this->load->model('Event_model');
 		$this->load->model('Wilayah_model');
+		$this->load->model('Inventaris_model');
 		$this->load->model('Pengguna_model');
+		$this->load->model('Keuangan_model');
 	}
 
 	public function index()
@@ -22,6 +24,41 @@ class Laporan extends CI_Controller {
 		redirect('dashboard');
 	}
 
+	public function inventaris()
+	{
+		verify_semua_bisa();
+		$data = array(
+            'inventaris_data' => $this->Inventaris_model->get_all(),
+        );
+        $this->template->load('template','laporan/laporan_inventaris', $data);		
+	}
+
+	public function cetak_laporan_inventaris()
+	{
+		verify_semua_bisa();
+		$data = array(
+            'inventaris_data' => $this->Inventaris_model->get_all(),
+        );
+        $this->load->view('laporan/cetak/cetak_laporan_inventaris', $data, FALSE);		
+	}
+	////////////////////////////////////
+	public function keuangan()
+	{
+		verify_semua_bisa();
+		$data = array(
+            'list_keuangan' => $this->Keuangan_model->get_all(),
+        );
+        $this->template->load('template','laporan/laporan_keuangan', $data);		
+	}
+	public function cetak_laporan_keuangan()
+	{
+		verify_semua_bisa();
+		$data = array(
+            'list_keuangan' => $this->Keuangan_model->get_all(),
+        );
+        $this->load->view('laporan/cetak/cetak_laporan_keuangan', $data, FALSE);		
+	}
+	////////////////////////////////////
 	public function anggota()
 	{
 		verify_semua_bisa();

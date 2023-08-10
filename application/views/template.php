@@ -106,7 +106,9 @@ $data = array(
                  $this->load->view('back_template/sidebar_sekretaris', $data); 
             } else if ($this->session->userdata('hak_akses') == 'Ketua') {
                  $this->load->view('back_template/sidebar_ketua', $data); 
-            }
+            }else if ($this->session->userdata('hak_akses') == 'Bendahara') {
+				$this->load->view('back_template/sidebar_bendahara', $data); 
+		   }
         ?>
         <!-- End Sidebar -->
 

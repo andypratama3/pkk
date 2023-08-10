@@ -45,6 +45,11 @@
                     <i class="fa fa-book"></i> <span>Data Pengguna</span>
                 </a>
             </li>
+            <li class="<?php echo ($this->uri->segment(1) == 'inventaris' ) ? 'active' : ''; ?>">
+                <a href="<?php echo site_url('inventaris') ?>">
+                    <i class="fa fa-book"></i> <span>Inventaris</span>
+                </a>
+            </li>
             <li class="treeview <?php echo ($this->uri->segment(2) == 'anggota' || $this->uri->segment(2) == 'keluarga' || $this->uri->segment(2) == 'kegiatan_pkk' || $this->uri->segment(2) == 'kader' || $this->uri->segment(2) == 'event' || $this->uri->segment(2) == 'pengguna' || $this->uri->segment(2) == 'wilayah') ? 'active open' : ''; ?>">
                 <a href="#">
                     <i class="fa fa-file-o"></i> <span>Laporan</span>
@@ -58,7 +63,8 @@
                     <li class="<?php echo ($this->uri->segment(2) == 'kader') ? 'active' : ''; ?>"><a href="<?php echo site_url('laporan/kader') ?>"><i class="fa fa-circle-o "></i> Laporan Kader</a></li>
                     <li class="<?php echo ($this->uri->segment(2) == 'event') ? 'active' : ''; ?>"><a href="<?php echo site_url('laporan/event') ?>"><i class="fa fa-circle-o "></i> Laporan Event</a></li>
                     <li class="<?php echo ($this->uri->segment(2) == 'pengguna') ? 'active' : ''; ?>"><a href="<?php echo site_url('laporan/pengguna') ?>"><i class="fa fa-circle-o "></i> Laporan Pengguna</a></li>
-                     <li class="<?php echo ($this->uri->segment(2) == 'wilayah') ? 'active' : ''; ?>"><a href="<?php echo site_url('laporan/wilayah') ?>"><i class="fa fa-circle-o "></i> Laporan Wilayah</a></li>
+                    <li class="<?php echo ($this->uri->segment(2) == 'wilayah') ? 'active' : ''; ?>"><a href="<?php echo site_url('laporan/wilayah') ?>"><i class="fa fa-circle-o "></i> Laporan Wilayah</a></li>
+                    <li class="<?php echo ($this->uri->segment(2) == 'inventaris') ? 'active' : ''; ?>"><a href="<?php echo site_url('laporan/inventaris') ?>"><i class="fa fa-circle-o "></i> Laporan inventaris</a></li>
                 </ul>
             </li>
         </ul>

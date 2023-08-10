@@ -14,6 +14,14 @@
 			redirect(site_url('dashboard'));
 		}
 	}
+	// Bendahara
+	function verify_bendahara() {
+		$CI = &get_instance();
+		if ($CI->session->userdata('hak_akses') != "Bendahara") {
+			$CI->session->set_flashdata('message', 'Anda Tidak Memiliki Hak Akses');
+			redirect(site_url('dashboard'));
+		}
+	}
 
 	function verify_sekretaris_pkk() {
 		$CI = &get_instance();
@@ -33,7 +41,7 @@
 
 	function verify_semua_bisa(){
 		$CI = &get_instance();
-		if ($CI->session->userdata('hak_akses') != "Ketua" AND $CI->session->userdata('hak_akses') != "Sekretaris_PKK" AND $CI->session->userdata('hak_akses') != "Dasawisma") {
+		if ($CI->session->userdata('hak_akses') != "Ketua" AND $CI->session->userdata('hak_akses') != "Sekretaris_PKK" AND $CI->session->userdata('hak_akses') != "Bendahara" AND $CI->session->userdata('hak_akses') != "Bendahara") {
 			$CI->session->set_flashdata('message', 'Anda Tidak Memiliki Hak Akses');
 			redirect(site_url('dashboard'));
 		}

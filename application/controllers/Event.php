@@ -141,6 +141,7 @@ class Event extends CI_Controller
             redirect(site_url('event'));
         }
     }
+	
     
     public function update_action() 
     {
